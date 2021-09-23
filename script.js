@@ -3,9 +3,9 @@ const selectCidades = document.getElementById("cidade");
 const butaoSalvar = document.getElementById("salvar")
 
 const cidades = {
-    "PI": ['Picos', 'Teresina', 'Inhuma', 'Parnaíba', 'Oeiras'],
-    "PE": ['Recife', 'Petrolina', 'Salgueiro'],
-    "DF": ['Brasília', 'Gama', 'Taguatinga', 'Paranoá']
+    PI: ['Picos', 'Teresina', 'Inhuma', 'Parnaíba', 'Oeiras'],
+    PE: ['Recife', 'Petrolina', 'Salgueiro'],
+    DF: ['Brasília', 'Gama', 'Taguatinga', 'Paranoá']
 };
 
 function adicionarOptions(select, options, chosen) {
@@ -20,6 +20,7 @@ adicionarOptions(selectEstados, estados, estadoInicial);
 selectEstados.addEventListener('change', function() {
     adicionarOptions(selectCidades, cidades[this.value]);
 });
+
 const select1 = document.getElementById("estados")
 select1.addEventListener('change', () => {
     estado = select1.options[select1.selectedIndex].text;
